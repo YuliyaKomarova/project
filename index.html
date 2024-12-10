@@ -7,38 +7,76 @@
     <title> Онлайн-школа </title>
 </head>
 <body>
-    <header> 
+    <header class="header">
         <img src="images/logo.png" alt="Логотип" width="125" height="125">
-    </header>
-    <h1>Онлайн-школа китайского языка Long 龙</h1>
-    <button>Войти</button>
-    <button>Зарегистрироваться</button>
-        <nav> 
+        <h1 class="header__title">Онлайн-школа китайского языка Long 龙</h1>
+        <button class="header__button button">Войти</button>
+        <button class="header__button button">Зарегистрироваться</button>
+        <nav class="header__menu">
             <ul>
                 <li><a href="https://elearning.marsu.ru/">Главное меню</a></li>
                 <li><a href="#/">Список курсов</a></li>
                 <li><a href="#/">О школе</a></li>
                 <li><a href="#/">Блог</a></li>
-                <img src="images/blog.jpg" alt="Главная страница" width="350" height="170">
             </ul>
+            <img src="images/blog.jpg" alt="Главная страница" width="350" height="170">
         </nav>
+    </header>
     <main>
         <input type="text"> <button>Поиск</button>
-        <div>
-            <p>Почему выбирают именно нашу школу?</p>
-            <section>
-                <img src="images/main page.jpg" alt="Главная страница" width="700" height="350">
-            </section>
-            <button><a href="https://wa-sai.ru/quiz">Узнай свой уровень языка</a></button>
+        <section>
+            <div>
+                <h2>Почему выбирают именно нашу школу?</h2>
+                <p>Наша школа предлагает интерактивные уроки, современные методики обучения и возможность практиковать язык с носителями. Кроме того, удобная платформа и доступ к разнообразным учебным материалам делают обучение эффективным и комфортным.</p>
+                <a href="https://wa-sai.ru/quiz">Узнай свой уровень языка</a>
+            </div>
+            <img src="images/mainpage.jpg" alt="Главная страница" width="700" height="350">
+        </section>
+        <section>
+            <div>
+                <h3>Выберете свой тариф</h3>
+                <a href="#" target="_blank">Все курсы</a>
         </div>
+            <ul>
+                <li>
+                    <img src="images/Flag.png" alt="Начальный уровень" width="150" height="150">
+                    <h4>Китайский для начального уровня (HSK 1-2)</h4>
+                    <p>Длительность: 100 часов</p>
+                    <a href="#">Узнать подробнее</a>
+                    <span>24000 Р</span>
+                </li>
+                <li>
+                    <img src="images/Flag.png" alt="Средний уровень" width="150" height="150">
+                    <h4>Китайский для среднего уровня (HSK 3-4)</h4>
+                    <p>Длительность: 400 часов</p>
+                    <a href="#">Узнать подробнее</a>
+                    <span>48000 Р</span>
+                </li>
+                <li>
+                    <img src="images/Flag.png" alt="Высокий уровень" width="150" height="150">
+                    <h5>Китайский для высокого уровня (HSK 5-6)</h5>
+                    <p>Длительность: 800 часов</p>
+                    <a href="#">Узнать подробнее</a>
+                    <span>96000 Р</span>  
+                </li>
+            </ul>
+        </section>
     </main>
     <footer>
-        <nav> 
+        <nav>
             <ul>
                 <li><a href="https://elearning.marsu.ru/">Контактная информация</a></li>
                 <li><a href="#/">Политика конфиденциальности</a></li>
             </ul>
         </nav>
     </footer>
+<section>
+    <form action="/">
+        <h6>Вход в личный кабинет</h6>
+        <input type="tel" name="phone" placeholder="Номер телефона" required>
+        <input type="password" name="password" placeholder="Пароль" required>
+        <button>Войти</button>
+    </form>
+</section>
 </body>
 </html>
