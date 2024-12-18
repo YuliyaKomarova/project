@@ -8,74 +8,105 @@
 </head>
 <body>
     <header class="header">
-        <img src="images/logo.png" alt="Логотип" width="125" height="125">
+        <img class="header__logo" src="images/logo.png" alt="Логотип" width="125" height="125">
         <h1 class="header__title">Онлайн-школа китайского языка Long 龙</h1>
         <button class="header__button button">Войти</button>
         <button class="header__button button">Зарегистрироваться</button>
         <nav class="header__menu">
-            <ul>
-                <li><a href="https://elearning.marsu.ru/">Главное меню</a></li>
-                <li><a href="#/">Список курсов</a></li>
-                <li><a href="#/">О школе</a></li>
-                <li><a href="#/">Блог</a></li>
+            <ul class="menu">
+                <li class="menu__item main__item -- active">
+                    <a class="menu__link" href="https://elearning.marsu.ru/">Главное меню</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#/">Список курсов</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#/">О школе</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#/">Блог</a>
+                </li>
             </ul>
-            <img src="images/blog.jpg" alt="Главная страница" width="350" height="170">
+            <img class="menu__img" src="images/blog.jpg" alt="Главная страница" width="350" height="170">
         </nav>
     </header>
-    <main>
-        <input type="text"> <button>Поиск</button>
+    <main class="main">
+        <input type="text"> 
+        <button class="button__search">Поиск</button>
         <section>
-            <div>
-                <h2>Почему выбирают именно нашу школу?</h2>
-                <p>Наша школа предлагает интерактивные уроки, современные методики обучения и возможность практиковать язык с носителями. Кроме того, удобная платформа и доступ к разнообразным учебным материалам делают обучение эффективным и комфортным.</p>
-                <a href="https://wa-sai.ru/quiz">Узнай свой уровень языка</a>
+            <div class="about">
+                <h2 class="about__title">Почему выбирают именно нашу школу?</h2>
+                <p class="about__info" >Наша школа предлагает интерактивные уроки, современные методики обучения и возможность практиковать язык с носителями. Кроме того, удобная платформа и доступ к разнообразным учебным материалам делают обучение эффективным и комфортным.</p>
+                <a class="about__link" href="https://wa-sai.ru/quiz">Узнай свой уровень языка</a>
             </div>
-            <img src="images/mainpage.jpg" alt="Главная страница" width="700" height="350">
+            <img class="" src="images/mainpage.jpg" alt="Главная страница" width="700" height="350">
         </section>
         <section>
-            <div>
-                <h3>Выберете свой тариф</h3>
-                <a href="#" target="_blank">Все курсы</a>
-        </div>
-            <ul>
+            <div class="courses">
+                <h3 class="courses__title" >Выберете свой тариф</h3>
+                <a class="courses__link" href="#" target="_blank">Все курсы</a>
+            </div>
+            <ul class="prices">
                 <li>
-                    <img src="images/Flag.png" alt="Начальный уровень" width="150" height="150">
-                    <h4>Китайский для начального уровня (HSK 1-2)</h4>
-                    <p>Длительность: 100 часов</p>
-                    <a href="#">Узнать подробнее</a>
-                    <span>24000 Р</span>
+                    <img class="prices__img" src="images/Flag.png" alt="Начальный уровень" width="150" height="150">
+                    <h4 class="prices__title">Китайский для начального уровня (HSK 1-2)</h4>
+                    <p class="prices__duration">Длительность: 100 часов</p>
+                    <a class="prices__info" href="#">Узнать подробнее</a>
+                    <span class="prices__price">24000 Р</span>
                 </li>
                 <li>
-                    <img src="images/Flag.png" alt="Средний уровень" width="150" height="150">
-                    <h4>Китайский для среднего уровня (HSK 3-4)</h4>
-                    <p>Длительность: 400 часов</p>
-                    <a href="#">Узнать подробнее</a>
-                    <span>48000 Р</span>
+                    <img class="prices__img" src="images/Flag.png" alt="Средний уровень" width="150" height="150">
+                    <h5 class="prices__title">Китайский для среднего уровня (HSK 3-4)</h4>
+                    <p class="prices__duration">Длительность: 400 часов</p>
+                    <a class="prices__info" href="#">Узнать подробнее</a>
+                    <span class="prices__price">48000 Р</span>
                 </li>
                 <li>
-                    <img src="images/Flag.png" alt="Высокий уровень" width="150" height="150">
-                    <h5>Китайский для высокого уровня (HSK 5-6)</h5>
-                    <p>Длительность: 800 часов</p>
-                    <a href="#">Узнать подробнее</a>
-                    <span>96000 Р</span>  
+                    <img class="prices__img" src="images/Flag.png" alt="Высокий уровень" width="150" height="150">
+                    <h6 class="prices__title">Китайский для высокого уровня (HSK 5-6)</h5>
+                    <p class="prices__duration">Длительность: 800 часов</p>
+                    <a class="prices__info" href="#">Узнать подробнее</a>
+                    <span class="prices__price">96000 Р</span>  
                 </li>
             </ul>
         </section>
+        <div class="teachers">
+            <h7 class="teacher__title">Наши преподаватели</h7>
+            <div class="teachers__card">
+                <img class="teacher__image" src="images/teacher1.jpg" alt="Фото преподавателя" width="150" height="150">
+                <p class="teacher__name">Сяо Ли</p>
+                <p class="teacher__desc">Преподаватель HSK1-HSK2</p>
+            </div>
+            <div class="teachers__card">
+                <img class="teacher__image" src="images/teacher2.jpg" alt="Фото преподавателя" width="150" height="150">
+                <p class="teacher__name">Мин Джу</p>
+                <p class="teacher__desc">Преподаватель HSK3-HSK4</p>
+            </div>
+            <div class="teachers__card">
+                <img class="teacher__image" src="images/teacher3.jpg" alt="Фото преподавателя" width="150" height="150">
+                <p class="teacher__name">Ин Юэ</p>
+                <p class="teacher__desc">Преподаватель HSK5-HSK6</p>
+            </div>
+        </div>
     </main>
-    <footer>
+    <footer class="footer">
         <nav>
-            <ul>
-                <li><a href="https://elearning.marsu.ru/">Контактная информация</a></li>
-                <li><a href="#/">Политика конфиденциальности</a></li>
+            <ul class="information">
+                <li class="information__item main__item -- active">
+                    <a class="information__link" href="https://elearning.marsu.ru/">Контактная информация</a>
+                </li>
+                <li class="information__item">
+                    <a class="information__link" href="#/">Политика конфиденциальности</a>
+                </li>
             </ul>
         </nav>
     </footer>
 <section>
     <form action="/">
-        <h6>Вход в личный кабинет</h6>
-        <input type="tel" name="phone" placeholder="Номер телефона" required>
-        <input type="password" name="password" placeholder="Пароль" required>
-        <button>Войти</button>
+        <h8 class="sign up">Вход в личный кабинет</h6>
+        <input class="phone number" type="tel" name="phone" placeholder="Номер телефона" required>
+        <input class="password" type="password" name="password" placeholder="Пароль" required>
+        <button class="sign up__button button">Войти</button>
     </form>
 </section>
 </body>
