@@ -2,114 +2,120 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Онлайн-школа </title>
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/style.css">
+    <title>Онлайн школа китайского языка</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="header">
-        <img class="header__logo" src="images/logo.png" alt="Логотип" width="125" height="125">
-        <h1 class="header__title">Онлайн-школа китайского языка Long 龙</h1>
-        <button class="header__button button">Войти</button>
-        <button class="header__button button">Зарегистрироваться</button>
-        <nav class="header__menu">
-            <ul class="menu">
-                <li class="menu__item main__item -- active">
-                    <a class="menu__link" href="https://elearning.marsu.ru/">Главное меню</a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__link" href="#/">Список курсов</a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__link" href="#/">О школе</a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__link" href="#/">Блог</a>
-                </li>
-            </ul>
-            <img class="menu__img" src="images/blog.jpg" alt="Главная страница" width="350" height="170">
-        </nav>
-    </header>
-    <main class="main">
-        <input type="text"> 
-        <button class="button__search">Поиск</button>
-        <section>
-            <div class="about">
-                <h2 class="about__title">Почему выбирают именно нашу школу?</h2>
-                <p class="about__info" >Наша школа предлагает интерактивные уроки, современные методики обучения и возможность практиковать язык с носителями. Кроме того, удобная платформа и доступ к разнообразным учебным материалам делают обучение эффективным и комфортным.</p>
-                <a class="about__link" href="https://wa-sai.ru/quiz">Узнай свой уровень языка</a>
-            </div>
-            <img class="" src="images/mainpage.jpg" alt="Главная страница" width="700" height="350">
-        </section>
-        <section>
-            <div class="courses">
-                <h3 class="courses__title" >Выберете свой тариф</h3>
-                <a class="courses__link" href="#" target="_blank">Все курсы</a>
-            </div>
-            <ul class="prices">
-                <li>
-                    <img class="prices__img" src="images/Flag.png" alt="Начальный уровень" width="150" height="150">
-                    <h4 class="prices__title">Китайский для начального уровня (HSK 1-2)</h4>
-                    <p class="prices__duration">Длительность: 100 часов</p>
-                    <a class="prices__info" href="#">Узнать подробнее</a>
-                    <span class="prices__price">24000 Р</span>
-                </li>
-                <li>
-                    <img class="prices__img" src="images/Flag.png" alt="Средний уровень" width="150" height="150">
-                    <h5 class="prices__title">Китайский для среднего уровня (HSK 3-4)</h4>
-                    <p class="prices__duration">Длительность: 400 часов</p>
-                    <a class="prices__info" href="#">Узнать подробнее</a>
-                    <span class="prices__price">48000 Р</span>
-                </li>
-                <li>
-                    <img class="prices__img" src="images/Flag.png" alt="Высокий уровень" width="150" height="150">
-                    <h6 class="prices__title">Китайский для высокого уровня (HSK 5-6)</h5>
-                    <p class="prices__duration">Длительность: 800 часов</p>
-                    <a class="prices__info" href="#">Узнать подробнее</a>
-                    <span class="prices__price">96000 Р</span>  
-                </li>
-            </ul>
-        </section>
-        <div class="teachers">
-            <h7 class="teacher__title">Наши преподаватели</h7>
-            <div class="teachers__card">
-                <img class="teacher__image" src="images/teacher1.jpg" alt="Фото преподавателя" width="150" height="150">
-                <p class="teacher__name">Сяо Ли</p>
-                <p class="teacher__desc">Преподаватель HSK1-HSK2</p>
-            </div>
-            <div class="teachers__card">
-                <img class="teacher__image" src="images/teacher2.jpg" alt="Фото преподавателя" width="150" height="150">
-                <p class="teacher__name">Мин Джу</p>
-                <p class="teacher__desc">Преподаватель HSK3-HSK4</p>
-            </div>
-            <div class="teachers__card">
-                <img class="teacher__image" src="images/teacher3.jpg" alt="Фото преподавателя" width="150" height="150">
-                <p class="teacher__name">Ин Юэ</p>
-                <p class="teacher__desc">Преподаватель HSK5-HSK6</p>
+    <!-- Шапка -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Логотип школы">
+            <h1>Онлайн-школа китайского языка Long 龙</h1>
+        </div>
+        <div class="auth-buttons">
+            <a href="log-reg.html">Вход/Регистрация</a>
+            <div class="menu-icon">
+                <button id="menu-toggle">Меню</button>
             </div>
         </div>
+    </header>
+
+    <!-- Выезжающее меню -->
+    <nav class="dropdown-menu" id="dropdownMenu">
+        <ul>
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Список курсов</a></li>
+            <li><a href="#">О школе</a></li>
+            <li><a href="#">Блог</a></li>
+        </ul>
+    </nav>
+
+    <!-- Основное содержание -->
+    <main>
+        <h2>Почему выбирают именно нашу школу?</h2>
+        <p>Наша школа предлагает интерактивные уроки, современные методики обучения и возможность практиковать язык с носителями. Кроме того, удобная платформа и доступ к разнообразным учебным материалам делают обучение эффективным и комфортным.</p>
+        <img src="images/mainpage.jpg" alt="Урок китайского языка">
+        <a href="https://wa-sai.ru/quiz">Узнай свой уровень языка</a>
+        <h2>Наши курсы</h2>
+        <div class="course-list">
+            <div class="course-item">
+                <img src="images/Flag-no-bg.png" alt="Курс 1">
+                <div class="course-info">
+                    <div class="course-title">Китайский для начального уровня (HSK 1-2)</div>
+                    <div class="course-details">Длительность: 100 часов</div>
+                    <div class="course-price">Цена: 24000 ₽</div>
+                </div>
+            </div>
+            <div class="course-item">
+                <img src="images/Flag-no-bg.png" alt="Курс 2">
+                <div class="course-info">
+                    <div class="course-title">Китайский для среднего уровня (HSK 3-4)</div>
+                    <div class="course-details">Длительность: 400 часов</div>
+                    <div class="course-price">Цена: 48000 ₽</div>
+                </div>
+            </div>
+            <div class="course-item">
+                <img src="images/Flag-no-bg.png" alt="Курс 3">
+                <div class="course-info">
+                    <div class="course-title">Китайский для высокого уровня (HSK 5-6)</div>
+                    <div class="course-details">Длительность: 800 часов</div>
+                    <div class="course-price">Цена: 96000 ₽</div>
+                </div>
+            </div>
+        </div>
+
+        <h2>Наши преподаватели</h2>
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <!-- Преподаватель 1 -->
+                <div class="swiper-slide">
+                    <div class="teacher-card">
+                        <img src="images/teacher1.jpg" alt="Начальный уровень">
+                        <div class="teacher-name">Сяо Ли</div>
+                        <div class="teacher-info">Преподаватель HSK1-HSK2</div>
+                    </div>
+                </div>
+                <!-- Преподаватель 2 -->
+                <div class="swiper-slide">
+                    <div class="teacher-card">
+                        <img src="images/teacher2.jpg" alt="Средний уровень">
+                        <div class="teacher-name">Мин Джу</div>
+                        <div class="teacher-info">Преподаватель HSK3-HSK4</div>
+                    </div>
+                </div>
+                <!-- Преподаватель 3 -->
+                <div class="swiper-slide">
+                    <div class="teacher-card">
+                        <img src="images/teacher3.jpg" alt="Высокий уровень">
+                        <div class="teacher-name">Ин Юэ</div>
+                        <div class="teacher-info">Преподаватель HSK5-HSK6</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Пагинация -->
+            <div class="swiper-pagination"></div>
+            <!-- Кнопки навигации -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
     </main>
-    <footer class="footer">
-        <nav>
-            <ul class="information">
-                <li class="information__item main__item -- active">
-                    <a class="information__link" href="https://elearning.marsu.ru/">Контактная информация</a>
-                </li>
-                <li class="information__item">
-                    <a class="information__link" href="#/">Политика конфиденциальности</a>
-                </li>
-            </ul>
-        </nav>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="images/logo.png" alt="Логотип школы">
+            <h3>Long 龙</h3>
+        </div>
+        <div class="contact-info">
+            <p>Email: info@chineseschool.com</p>
+            <p>Телефон: +7 (999) 123-45-67</p>
+            <p>Адрес: г. Йошкар Ола</p>
+        </div>
     </footer>
-<section>
-    <form action="/">
-        <h8 class="sign up">Вход в личный кабинет</h6>
-        <input class="phone_number" type="tel" name="phone" placeholder="Номер телефона" required>
-        <input class="password" type="password" name="password" placeholder="Пароль" required>
-        <button class="sign up__button button">Войти</button>
-    </form>
-</section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
