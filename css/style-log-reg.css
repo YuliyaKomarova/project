@@ -56,3 +56,342 @@
     width: 1px;
     background-color: #c8a2c8;
 }
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Bold.ttf");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Italic.ttf");
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+
+
+/* Общий стиль */
+body {
+    font-family: "Montserrat";
+    margin: 0;
+    padding: 0;
+    background-color: #ffe6e6; /* Нежно-розовый фон */
+}
+
+/* Шапка */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #c8a2c8; /* Светло-фиолетовый цвет */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 0 0 20px 20px; /* Закругление нижних углов */
+}
+header .logo {
+    display: flex;
+    align-items: center;
+}
+header .logo img {
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 10px; /* Закругление у логотипа */
+}
+header .logo h1 {
+    margin: 0;
+    font-size: 24px;
+}
+header .auth-buttons {
+    display: flex;
+    gap: 10px;
+    min-width: 200px;
+    max-width: 400px;
+}
+header .auth-buttons a {
+    text-decoration: none;
+    color: #c8a2c8;
+    background-color: #ffe6e6; /* Кнопки под цвет фона */
+    padding: 10px 15px;
+    border-radius: 20px; /* Закругление кнопок */
+    font-weight: bold;
+}
+header .auth-buttons a:hover {
+    background-color: #ffb3b3; /* Цвет при наведении */
+    color: white;
+}
+
+header .auth-buttons button {
+    text-decoration: none;
+    color: #c8a2c8;
+    border: none;
+    background-color: #ffe6e6; /* Кнопки под цвет фона */
+    padding: 10px 15px;
+    border-radius: 20px; /* Закругление кнопок */
+    font-weight: bold;
+}
+header .auth-buttons button:hover {
+    background-color: #ffb3b3; /* Цвет при наведении */
+    color: white;
+}
+
+/* Выезжающее меню */
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 60px; /* Высота шапки + отступ */
+    right: 20px;
+    background-color: #c8a2c8; /* Светло-фиолетовый цвет */
+    color: white;
+    padding: 10px;
+    border-radius: 0 0 20px 20px; /* Закругление нижних углов */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.dropdown-menu ul li {
+    margin: 10px 0;
+}
+.dropdown-menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    border-radius: 15px; /* Закругление пунктов меню */
+}
+.dropdown-menu ul li a:hover {
+    background-color: #ffe6e6; /* Цвет фона при наведении */
+    color: #c8a2c8; /* Цвет текста при наведении */
+}
+
+/* Добавляем класс для показа меню */
+.dropdown-menu.show {
+    display: block;
+}
+
+/* Основное содержание */
+main {
+    padding: 20px;
+    background-color: #ffffff; /* Белый фон для контента */
+    margin: 20px;
+    border-radius: 20px; /* Закругление блока контента */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 60%;
+    margin: 20px auto;
+}
+main h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #c8a2c8; /* Цвет заголовков */
+}
+main p {
+    max-width: 60%;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #333; /* Темный текст */
+}
+main img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 15px; /* Закругление изображений */
+}
+
+main a {
+    width: 400px;
+    text-decoration: none;
+    color: #c8a2c8;
+    background-color: white;
+    font-size: 28px;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    border-radius: 15px; /* Закругление пунктов меню */
+}
+main a:hover {
+    background-color: #ffb3b3; /* Цвет фона при наведении */
+    color: white; /* Цвет текста при наведении */
+}
+
+/* Блок с курсами */
+.course-list {
+    max-height: 300px; /* Максимальная высота блока */
+    max-width: 50%;
+    overflow-y: auto; /* Вертикальная прокрутка */
+    border: 2px solid #c8a2c8; /* Граница */
+    border-radius: 15px; /* Закругление углов */
+    padding: 15px;
+    background-color: #fff; /* Фон блока */
+    margin-bottom: 20px;
+}
+.course-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.course-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px; /* Закругление фото */
+    margin-right: 15px;
+}
+.course-info {
+    flex-grow: 1;
+}
+.course-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.course-details {
+    font-size: 14px;
+    color: #555;
+}
+.course-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #c8a2c8;
+}
+
+/* Стилизация скролл-бара */
+.course-list::-webkit-scrollbar {
+    width: 8px;
+}
+.course-list::-webkit-scrollbar-thumb {
+    background-color: #c8a2c8;
+    border-radius: 10px;
+}
+.course-list::-webkit-scrollbar-track {
+    background-color: #f0f0f0;
+}
+
+/* Блок с преподавателями */
+.teachers {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Расстояние между карточками */
+    margin-bottom: 20px;
+}
+.swiper {
+    width: 100%;
+    padding: 20px 0;
+}
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.teacher-card {
+    width: 80%; /* Ширина карточки */
+    max-width: 300px; /* Максимальная ширина */
+    background-color: #fff;
+    border: 2px solid #c8a2c8;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.teacher-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%; /* Круглая форма фото */
+    margin-bottom: 10px;
+}
+.teacher-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #c8a2c8;
+}
+.teacher-info {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Стиль пагинации и навигации */
+.swiper-pagination-bullet {
+    background-color: #c8a2c8;
+    opacity: 1;
+}
+.swiper-pagination-bullet-active {
+    background-color: #b39ddb; /* Активный цвет */
+}
+.swiper-button-next,
+.swiper-button-prev {
+    color: #c8a2c8;
+}
+
+/* Подвал */
+footer {
+    background-color: #c8a2c8; /* Светло-фиолетовый цвет */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px 20px 0 0; /* Закругление верхних углов */
+    margin-top: 20px;
+}
+footer .footer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+footer .footer-logo img {
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 10px; /* Закругление у логотипа */
+}
+footer .footer-logo h3 {
+    margin: 0;
+    font-size: 20px;
+}
+footer .social-links {
+    margin-bottom: 15px;
+}
+footer .social-links a {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+    font-size: 24px;
+}
+footer .social-links a:hover {
+    color: #ffe6e6; /* Цвет при наведении */
+}
+footer .contact-info {
+    font-size: 14px;
+    color: #f0f0f0;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+    nav {
+        display: none;
+    }
+    nav.active {
+        display: block;
+    }
+}

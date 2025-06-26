@@ -1,0 +1,55 @@
+/* Шапка */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #c8a2c8; /* Светло-фиолетовый цвет */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 0 0 20px 20px; /* Закругление нижних углов */
+}
+header .logo {
+    display: flex;
+    align-items: center;
+}
+header .logo img {
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 10px; /* Закругление у логотипа */
+}
+header .logo h1 {
+    margin: 0;
+    font-size: 24px;
+}
+header .auth-buttons {
+    display: flex;
+    gap: 10px;
+    min-width: 200px;
+    max-width: 400px;
+}
+header .auth-buttons a {
+    text-decoration: none;
+    color: #c8a2c8;
+    background-color: #ffe6e6; /* Кнопки под цвет фона */
+    padding: 10px 15px;
+    border-radius: 20px; /* Закругление кнопок */
+    font-weight: bold;
+}
+header .auth-buttons a:hover {
+    background-color: #ffb3b3; /* Цвет при наведении */
+    color: white;
+}
+
+header .auth-buttons button {
+    text-decoration: none;
+    color: #c8a2c8;
+    border: none;
+    background-color: #ffe6e6; /* Кнопки под цвет фона */
+    padding: 10px 15px;
+    border-radius: 20px; /* Закругление кнопок */
+    font-weight: bold;
+}
+header .auth-buttons button:hover {
+    background-color: #ffb3b3; /* Цвет при наведении */
+    color: white;
+}
