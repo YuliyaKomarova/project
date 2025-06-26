@@ -1,3 +1,6 @@
+/* Подключение предзагрузчика страницы */
+@import "/styles/preloader.css";
+
 @font-face {
     font-family: "Montserrat";
     src: url("../fonts/Montserrat-Regular.ttf");
@@ -19,7 +22,6 @@
     font-style: italic;
     font-display: swap;
 }
-
 
 
 /* Общий стиль */
@@ -287,6 +289,7 @@ main a:hover {
 /* Подвал */
 footer {
     background-color: #c8a2c8; /* Светло-фиолетовый цвет */
+    
     color: white;
     padding: 20px;
     text-align: center;
