@@ -105,3 +105,84 @@ if (preloader && content) {
         preloader.remove();
     }, 3000); // Задержка 3 секунды
 }
+/*
+ <div class="swiper-wrapper">
+                    <!-- Преподаватель 1 -->
+                    <div class="swiper-slide">
+                        <div class="teacher-card">
+                            <img src="images/teacher1.jpg" alt="Начальный уровень">
+                            <div class="teacher-name">Сяо Ли</div>
+                            <div class="teacher-info">Преподаватель HSK1-HSK2</div>
+                        </div>
+                    </div>
+                    <!-- Преподаватель 2 -->
+                    <div class="swiper-slide">
+                        <div class="teacher-card">
+                            <img src="images/teacher2.jpg" alt="Средний уровень">
+                            <div class="teacher-name">Мин Джу</div>
+                            <div class="teacher-info">Преподаватель HSK3-HSK4</div>
+                        </div>
+                    </div>
+                    <!-- Преподаватель 3 -->
+                    <div class="swiper-slide">
+                        <div class="teacher-card">
+                            <img src="images/teacher3.jpg" alt="Высокий уровень">
+                            <div class="teacher-name">Ин Юэ</div>
+                            <div class="teacher-info">Преподаватель HSK5-HSK6</div>
+                        </div>
+                    </div>
+                </div>
+
+*/
+
+//Объявляем переменную cardsCon и сохраняем в нее элементы секции job
+const cardsCon = document.querySelector(".swiper");
+//  проверяем существует ли элемент cardsCon, если он существует то переходим далее
+if (cardsCon) {
+//Объявляем переменную cardList и сохраняем в нее список с классом 
+    const cardList = cardsCon.querySelector(".swiper-wrapper");
+    // Пример URL для получения данных с сервера (откуда загружаются данные)
+    const apiUrl = "data.json";
+    // Функция для создания карточки
+    const createCard = (
+        imageUrl,
+        imageAlt,
+        title,
+        description
+    ) => {
+        // Шаблонные строки и подстановки
+// создается переменная card, которая содержит HTML-код для карточки изображения. Внутри <li> (элемента списка) создаются три элемента <img>(изображение), <h3>  (заголовок с названием вакансии), <p> (описание вакансии):
+        const card = `
+            <div class="swiper-slide">
+                <div class="teacher-card">
+                    <img src="${imageUrl}" alt="${imageAlt}">
+                    <div class="teacher-name">${title}</div>
+                    <div class="teacher-info">${description}</div>
+                </div>
+            </div>`;
+//возвращает строку card, которая содержит HTML-код для карточки изображения
+        return card;
+
+    };
+    fetch(apiUrl)
+        .then((response) => response.json())
+        .then((data) => {
+            console.log(data); // Данные
+            console.log(typeof data); // Тип полученных данных
+
+            data.forEach((item) => {
+                const cardElement = createCard(
+                    item.image,
+                    item.iconAlt,
+                    item.title,
+                    item.description
+                );
+                cardList.insertAdjacentHTML("beforeend", cardElement);
+            });
+        })
+        .catch((error) => {
+            console.error("Ошибка при загрузке данных:", error);
+        });
+ 
+
+}
