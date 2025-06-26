@@ -86,7 +86,6 @@ console.log(headerMenu)
             const linkIndex = createLink(link.link, link.title);
 // С помощью метода insertAdjacentHTML добавляем созданный HTML-код в конец списка headerList.
             headerList.insertAdjacentHTML('beforeend', linkIndex);
-
         }
 }
 // Preloader страницы
