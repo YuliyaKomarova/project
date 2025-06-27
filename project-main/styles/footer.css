@@ -1,0 +1,53 @@
+/* Подвал */
+footer {
+    background-color: #c8a2c8; /* Светло-фиолетовый цвет */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px 20px 0 0; /* Закругление верхних углов */
+    margin-top: 20px;
+}
+footer .footer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+footer .footer-logo img {
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 10px; /* Закругление у логотипа */
+}
+footer .footer-logo h3 {
+    margin: 0;
+    font-size: 20px;
+}
+footer .social-links {
+    margin-bottom: 15px;
+}
+footer .social-links a {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+    font-size: 24px;
+}
+footer .social-links a:hover {
+    color: #ffe6e6; /* Цвет при наведении */
+}
+footer .contact-info {
+    font-size: 14px;
+    color: #f0f0f0;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+    nav {
+        display: none;
+    }
+    nav.active {
+        display: block;
+    }
+}

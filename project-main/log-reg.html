@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация и вход</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-log-reg.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Логотип школы">
+            <h1>Онлайн-школа китайского языка Long 龙</h1>
+        </div>
+        <div class="auth-buttons">
+            <div class="menu-icon">
+                <button id="menu-toggle">Меню</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Выезжающее меню -->
+    <nav class="dropdown-menu" id="dropdownMenu">
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="#">Список курсов</a></li>
+            <li><a href="#">О школе</a></li>
+            <li><a href="#">Блог</a></li>
+        </ul>
+    </nav>
+
+    <!-- Блок с формами -->
+    <div class="auth-container">
+        <!-- Форма входа -->
+        <div class="auth-form">
+            <h2>Вход</h2>
+            <form action="#" method="POST">
+                <input type="text" placeholder="Логин" required>
+                <input type="password" placeholder="Пароль" required>
+                <input type="submit" value="Войти" id="log">
+            </form>
+        </div>
+
+        <!-- Форма регистрации -->
+        <div class="auth-form">
+            <h2>Регистрация</h2>
+            <form action="#" method="POST">
+                <input type="text" placeholder="Имя" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Пароль" required>
+                <input type="submit" value="Зарегистрироваться" id="reg">
+            </form>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script>
+        document.getElementById('log').addEventListener('click', function() { 
+            alert('Вход выполнен'); 
+        });
+
+        document.getElementById('reg').addEventListener('click', function() { 
+            alert('Регистрация выполнена'); 
+        });
+    </script>
+</body>
+</html>

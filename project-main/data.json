@@ -1,0 +1,20 @@
+[
+    {
+        "image": "images/teacher3.jpg",
+        "iconAlt": "Начальный уровень",
+        "title": "Сяо Ли",
+        "description": "Преподаватель HSK1-HSK2"
+    },
+    {
+        "image": "images/teacher3.jpg",
+        "iconAlt": "Средний уровень",
+        "title": "Мин Джу",
+        "description": "Преподаватель HSK3-HSK4"
+    },
+    {
+        "image": "images/teacher3.jpg",
+        "iconAlt": "Высокий уровень",
+        "title": "Ин Юэ",
+        "description": "Преподаватель HSK5-HSK6"
+    }
+]

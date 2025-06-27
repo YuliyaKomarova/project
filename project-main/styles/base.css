@@ -1,0 +1,7 @@
+/* Общий стиль */
+body {
+    font-family: "Montserrat";
+    margin: 0;
+    padding: 0;
+    background-color: #ffe6e6; /* Нежно-розовый фон */
+}
